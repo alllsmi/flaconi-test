@@ -21,6 +21,7 @@ public class DriverFactory {
         else {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
